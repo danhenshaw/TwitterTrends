@@ -8,8 +8,8 @@
 
 struct Constants {
     
-    let consumerKey = "xYlAVUZXejndqa5WBNwwvOY5n"
-    let consumerSecret = "m73w74f8kpNSELTUbPd4YSHrKuIufz4htEkyH7ILYBzXoT1TWu"
+    let consumerKey = ""
+    let consumerSecret = ""
     
     let baseURL = "https://api.twitter.com/"
     let tokenURLExtension = "oauth2/token"

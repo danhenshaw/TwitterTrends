@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     var authenticateUser = AuthenticateUser()
     var twitterTrendsAPI = TwitterTrendsAPI()
     var woeidAPI = WOEIDAPI()
-    let locationManager = LocationManager()
+    var locationManager = LocationManager()
+    var constants = Constants()
     
     var retrievedWoeidData : ClosestData? = nil
     
@@ -49,7 +50,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
 
         locationManager.delegate = self
-        locationManager.getLocation()
+        
+        if constants.consumerKey == "" || constants.consumerSecret == "" {
+            updateSubHeaderLabel(text: "Please enter consumer key/secret to continue")
+        } else {
+            updateSubHeaderLabel(text: "...fetching bearer token")
+            locationManager.getLocation()
+        }
     }
     
     func configureHeaderView() {
@@ -100,8 +107,6 @@ class ViewController: UIViewController {
     //    - Step 3: fetch twitter trending topics
 
     func startAuthorisationAndFetchingProcess(latitude: String, longitude: String) {
-        
-        updateSubHeaderLabel(text: "...fetching bearer token")
         
         authenticateUser.getBearerToken { (bearerToken, error) in
             if let error = error {
