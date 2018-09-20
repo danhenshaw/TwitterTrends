@@ -9,3 +9,9 @@ The following process is followed in order to successfully retrieve Twitter's tr
   - We fetch the closest 'WOEID' from twitter based on users coordinates. This information is parsed for future use.
   - Twitter's trending topics are fetched and parsed
   - The view is updated to reflect successful or failed fetch request
+  
+Requirements:
+  - Twitter Consumer Key
+  - Twitter Consumer Secret
+  - Head to https://apps.twitter.com/ to apply
+  - Consumer Key and Consumer Secret need to be added to Constants to enable app functionality
