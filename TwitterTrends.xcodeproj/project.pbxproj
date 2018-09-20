@@ -12,6 +12,11 @@
 		90290443215381D3000814FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90290441215381D3000814FC /* Main.storyboard */; };
 		90290445215381D9000814FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90290444215381D9000814FC /* Assets.xcassets */; };
 		90290448215381D9000814FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90290446215381D9000814FC /* LaunchScreen.storyboard */; };
+		90290452215384C9000814FC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90290451215384C9000814FC /* TableView.swift */; };
+		9029045521538508000814FC /* TwitterTrendsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045421538508000814FC /* TwitterTrendsViewCell.swift */; };
+		9029045721538591000814FC /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045621538591000814FC /* Constraints.swift */; };
+		9029045A215385C2000814FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90290459215385C2000814FC /* MainView.swift */; };
+		9029045D215386FB000814FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045C215386FB000814FC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		90290444215381D9000814FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90290447215381D9000814FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90290449215381D9000814FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90290451215384C9000814FC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		9029045421538508000814FC /* TwitterTrendsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTrendsViewCell.swift; sourceTree = "<group>"; };
+		9029045621538591000814FC /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		90290459215385C2000814FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9029045C215386FB000814FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +66,41 @@
 			children = (
 				9029043D215381D3000814FC /* AppDelegate.swift */,
 				9029043F215381D3000814FC /* ViewController.swift */,
+				90290453215384DF000814FC /* Views */,
+				9029045821538595000814FC /* Extensions */,
+				9029045B215386E1000814FC /* Constants */,
 				90290441215381D3000814FC /* Main.storyboard */,
 				90290444215381D9000814FC /* Assets.xcassets */,
 				90290446215381D9000814FC /* LaunchScreen.storyboard */,
 				90290449215381D9000814FC /* Info.plist */,
 			);
 			path = TwitterTrends;
+			sourceTree = "<group>";
+		};
+		90290453215384DF000814FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90290459215385C2000814FC /* MainView.swift */,
+				90290451215384C9000814FC /* TableView.swift */,
+				9029045421538508000814FC /* TwitterTrendsViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9029045821538595000814FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9029045621538591000814FC /* Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9029045B215386E1000814FC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9029045C215386FB000814FC /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90290440215381D3000814FC /* ViewController.swift in Sources */,
+				9029045A215385C2000814FC /* MainView.swift in Sources */,
+				90290452215384C9000814FC /* TableView.swift in Sources */,
+				9029045521538508000814FC /* TwitterTrendsViewCell.swift in Sources */,
+				9029045D215386FB000814FC /* Constants.swift in Sources */,
 				9029043E215381D3000814FC /* AppDelegate.swift in Sources */,
+				9029045721538591000814FC /* Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
