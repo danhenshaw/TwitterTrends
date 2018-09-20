@@ -14,15 +14,14 @@ class TwitterTrendsAPI {
     
     func fetchTwitterTrends(bearerToken: String, woeid: String, completionHandler: @escaping (_ twitterTrends: [TrendingData.TwitterData]?, _ error: Error?) -> Void) {
         
-        let url = URL(string: constants.baseURL + constants.trendsURLExtension)!
+        let url = URL(string: constants.baseURL + constants.trendsPlacesURLExtension + String(format: "id=%@", woeid))!
 
         var request = URLRequest(url: url)
 
         request.httpMethod = "GET"
         request.setValue("Bearer " + bearerToken, forHTTPHeaderField: "Authorization")
 
-        let session = URLSession.shared
-        let task = session.dataTask(with: request as URLRequest) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
         
             guard (error == nil) else {
                 completionHandler(nil, error)
@@ -51,7 +50,6 @@ class TwitterTrendsAPI {
             } catch {
                 completionHandler(nil, error)
             }
-
         }
         task.resume()
     }

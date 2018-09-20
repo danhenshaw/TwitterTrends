@@ -12,14 +12,14 @@
 		90290443215381D3000814FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90290441215381D3000814FC /* Main.storyboard */; };
 		90290445215381D9000814FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90290444215381D9000814FC /* Assets.xcassets */; };
 		90290448215381D9000814FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90290446215381D9000814FC /* LaunchScreen.storyboard */; };
-		90290452215384C9000814FC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90290451215384C9000814FC /* TableView.swift */; };
 		9029045521538508000814FC /* TwitterTrendsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045421538508000814FC /* TwitterTrendsViewCell.swift */; };
 		9029045721538591000814FC /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045621538591000814FC /* Constraints.swift */; };
-		9029045A215385C2000814FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90290459215385C2000814FC /* MainView.swift */; };
 		9029045D215386FB000814FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045C215386FB000814FC /* Constants.swift */; };
 		9029046021538EA0000814FC /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029045F21538EA0000814FC /* Authenticate.swift */; };
 		9029046221539BA4000814FC /* TwitterTrendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029046121539BA4000814FC /* TwitterTrendsAPI.swift */; };
 		9029046421539DCD000814FC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029046321539DCD000814FC /* DataModel.swift */; };
+		902904662153AAC0000814FC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902904652153AAC0000814FC /* LocationManager.swift */; };
+		902904682153AD26000814FC /* WOEIDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902904672153AD26000814FC /* WOEIDAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		90290444215381D9000814FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90290447215381D9000814FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90290449215381D9000814FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90290451215384C9000814FC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		9029045421538508000814FC /* TwitterTrendsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTrendsViewCell.swift; sourceTree = "<group>"; };
 		9029045621538591000814FC /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
-		90290459215385C2000814FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9029045C215386FB000814FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9029045F21538EA0000814FC /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
 		9029046121539BA4000814FC /* TwitterTrendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTrendsAPI.swift; sourceTree = "<group>"; };
 		9029046321539DCD000814FC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		902904652153AAC0000814FC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		902904672153AD26000814FC /* WOEIDAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOEIDAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,8 @@
 			children = (
 				9029043D215381D3000814FC /* AppDelegate.swift */,
 				9029043F215381D3000814FC /* ViewController.swift */,
-				90290453215384DF000814FC /* Views */,
+				90290453215384DF000814FC /* ViewCells */,
+				902904692153C843000814FC /* APIClient */,
 				9029045E21538E81000814FC /* Models */,
 				9029045821538595000814FC /* Extensions */,
 				9029045B215386E1000814FC /* Constants */,
@@ -84,14 +85,12 @@
 			path = TwitterTrends;
 			sourceTree = "<group>";
 		};
-		90290453215384DF000814FC /* Views */ = {
+		90290453215384DF000814FC /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				90290459215385C2000814FC /* MainView.swift */,
-				90290451215384C9000814FC /* TableView.swift */,
 				9029045421538508000814FC /* TwitterTrendsViewCell.swift */,
 			);
-			path = Views;
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 		9029045821538595000814FC /* Extensions */ = {
@@ -113,11 +112,20 @@
 		9029045E21538E81000814FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9029045F21538EA0000814FC /* Authenticate.swift */,
-				9029046121539BA4000814FC /* TwitterTrendsAPI.swift */,
 				9029046321539DCD000814FC /* DataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		902904692153C843000814FC /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				9029045F21538EA0000814FC /* Authenticate.swift */,
+				9029046121539BA4000814FC /* TwitterTrendsAPI.swift */,
+				902904672153AD26000814FC /* WOEIDAPI.swift */,
+				902904652153AAC0000814FC /* LocationManager.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90290440215381D3000814FC /* ViewController.swift in Sources */,
-				9029045A215385C2000814FC /* MainView.swift in Sources */,
-				90290452215384C9000814FC /* TableView.swift in Sources */,
+				902904662153AAC0000814FC /* LocationManager.swift in Sources */,
 				9029046221539BA4000814FC /* TwitterTrendsAPI.swift in Sources */,
 				9029045521538508000814FC /* TwitterTrendsViewCell.swift in Sources */,
 				9029046421539DCD000814FC /* DataModel.swift in Sources */,
@@ -201,6 +208,7 @@
 				9029045D215386FB000814FC /* Constants.swift in Sources */,
 				9029043E215381D3000814FC /* AppDelegate.swift in Sources */,
 				9029045721538591000814FC /* Constraints.swift in Sources */,
+				902904682153AD26000814FC /* WOEIDAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

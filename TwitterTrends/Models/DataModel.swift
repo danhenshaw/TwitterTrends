@@ -18,14 +18,14 @@ struct TrendingData : Codable {
         var promotedContent : String?
         var query : String?
         var tweetVolume : Int?
-        
-        /** Custom key mapping to get rid of the underscore. */
-        enum CodingKeys: String, CodingKey {
-            case name
-            case url
-            case promotedContent = "promoted_content"
-            case query
-            case tweetVolume = "tweet_volume"
-        }
     }
+}
+
+struct ClosestData : Codable {
+    let country : String
+    let countryCode : String
+    let name : String
+    let parentid : Int
+    let url : String
+    let woeid : Int
 }

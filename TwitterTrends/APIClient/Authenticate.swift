@@ -23,8 +23,7 @@ class AuthenticateUser {
         request.httpBody = "grant_type=client_credentials".data(using: .utf8)
         request.setValue("application/x-www-form-urlencoded;charset=UTF-8", forHTTPHeaderField: "Content-Type")
         
-        let session = URLSession.shared
-        let task = session.dataTask(with: request as URLRequest) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
             
             guard (error == nil) else {
                 completionHandler(nil, error)
